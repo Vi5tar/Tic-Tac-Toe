@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe Mobile</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="board">
+  <div class="boardA1" id="boardA1"></div>
+  <div class="boardA2" id="boardA2"></div>
+  <div class="boardA3" id="boardA3"></div>
+  <div class="boardB1" id="boardB1"></div>
+  <div class="boardB2" id="boardB2"></div>
+  <div class="boardB3" id="boardB3"></div>
+  <div class="boardC1" id="boardC1"></div>
+  <div class="boardC2" id="boardC2"></div>
+  <div class="boardC3" id="boardC3"></div>
+  <div id="topLeftX"></div>
+  <div id="topMiddleX"></div>
+  <div id="topRightX"></div>
+  <div id="midLeftX"></div>
+  <div id="midMiddleX"></div>
+  <div id="midRightX"></div>
+  <div id="botLeftX"></div>
+  <div id="botMiddleX"></div>
+  <div id="botRightX"></div>
+</div>
+
+<div class="text-center clearBoard">
+  <button class="btn btn-default" id="clearBoard" onclick="clearBoard()">Choose Letter</button>
+</div>
+
+<!-- X Wins Modal -->
+<div class="modal fade" id="xModal" role="dialog">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">X Wins!</h4>
+          <div class="text-center">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearBoard()">Play Again!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- O Wins Modal -->
+<div class="modal fade" id="oModal" role="dialog">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">O Wins!</h4>
+          <div class="text-center">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearBoard()">Play Again!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tie Modal -->
+<div class="modal fade" id="tieModal" role="dialog">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Tie!</h4>
+          <div class="text-center">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearBoard()">Play Again!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- X or O Modal -->
+<div class="modal fade" id="xOrOModal" role="dialog">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">X or O?</h4>
+          <div class="text-center">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="playerX()">X</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="playerO()">O</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

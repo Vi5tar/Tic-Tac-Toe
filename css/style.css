@@ -1,0 +1,499 @@
+body {
+  margin: 2%;
+}
+
+.vertical-alignment-helper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  pointer-events: none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+  /* To center vertically */
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+}
+.modal-content {
+  /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+  width: inherit;
+  height: inherit;
+  /* To center horizontally */
+  margin: 0 auto;
+  pointer-events: all;
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.board {
+  margin: auto;
+  position: relative;
+  width: 385px;
+  height: 385px;
+}
+
+.clearBoard {
+  position: relative;
+  top: 10px;
+}
+
+.boardA1 {
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  background: black;
+}
+
+.boardA2 {
+  position: absolute;
+  right: 130px;
+  width: 125px;
+  height: 125px;
+  background: black;
+}
+
+.boardA3 {
+  position: absolute;
+  right: 0px;
+  width: 125px;
+  height: 125px;
+  background: black;
+}
+
+.boardB1 {
+  position: absolute;
+  top: 130px;
+  width: 125px;
+  height: 125px;
+  background: black;
+}
+
+.boardB2 {
+  position: absolute;
+  top: 130px;
+  right: 130px;
+  width: 125px;
+  height: 125px;
+  background: black;
+}
+
+.boardB3 {
+  position: absolute;
+  top: 130px;
+  right: 0px;
+  width: 125px;
+  height: 125px;
+  background: black;
+}
+
+.boardC1 {
+  position: absolute;
+  top: 260px;
+  width: 125px;
+  height: 125px;
+  background: black;
+}
+
+.boardC2 {
+  position: absolute;
+  top: 260px;
+  right: 130px;
+  width: 125px;
+  height: 125px;
+  background: black;
+}
+
+.boardC3 {
+  position: absolute;
+  top: 260px;
+  right: 0px;
+  width: 125px;
+  height: 125px;
+  background: black;
+}
+
+.topLeftX {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+}
+
+.topLeftX:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "X";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.topMiddleX {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  right: 130px;
+}
+
+.topMiddleX:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "X";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.topRightX {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  right: 0px;
+}
+
+.topRightX:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "X";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.midLeftX {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 130px;
+}
+
+.midLeftX:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "X";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.midMiddleX {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 130px;
+  right: 130px;
+}
+
+.midMiddleX:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "X";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.midRightX {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 130px;
+  right: 0px;
+}
+
+.midRightX:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "X";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.botLeftX {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 260px;
+}
+
+.botLeftX:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "X";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.botMiddleX {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 260px;
+  right: 130px;
+}
+
+.botMiddleX:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "X";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.botRightX {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 260px;
+  right: 0px;
+}
+
+.botRightX:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "X";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.topLeftO {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+}
+
+.topLeftO:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "O";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.topMiddleO {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  right: 130px;
+}
+
+.topMiddleO:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "O";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.topRightO {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  right: 0px;
+}
+
+.topRightO:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "O";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.midLeftO {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 130px;
+}
+
+.midLeftO:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "O";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.midMiddleO {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 130px;
+  right: 130px;
+}
+
+.midMiddleO:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "O";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.midRightO {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 130px;
+  right: 0px;
+}
+
+.midRightO:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "O";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.botLeftO {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 260px;
+}
+
+.botLeftO:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "O";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.botMiddleO {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 260px;
+  right: 130px;
+}
+
+.botMiddleO:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "O";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.botRightO {
+  height: 125px;
+  width: 125px;
+  background-color: blue;
+  position: absolute;
+  top: 260px;
+  right: 0px;
+}
+
+.botRightO:after {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "O";
+  font-size: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
